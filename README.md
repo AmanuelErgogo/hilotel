@@ -5,6 +5,10 @@
 
 `python3 execution_time_result.py`
 
+##### Inspect datatset
+
+`python3 tools/inspect_demonstrations.py logs/robomimic/XArm7Env-v1/hilo_exp_pick_and_place.hdf5`
+
 ##### train
 
 `python3 train.py --task XArm7Env-v1 --dataset logs/robomimic/XArm7Env-v1/hilo_exp_pick_and_place.hdf5 --algo bcq --name hilotel_exp_pick_and_place_bcq`
