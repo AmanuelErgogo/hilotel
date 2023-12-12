@@ -28,13 +28,13 @@ teleop_std_dev = np.std(teleop_execution_times)
 box_colors = ['lightblue', 'lightgreen']
 
 # Plot box plot with custom colors and grid
-plt.boxplot([passthrough_execution_times, teleop_execution_times], labels=['Passthrough', 'Teleop'], patch_artist=True,
+plt.boxplot([passthrough_execution_times, teleop_execution_times], labels=['Passthrough', 'Teleoperation mode'], patch_artist=True,
             boxprops=dict(facecolor=box_colors[0]), medianprops=dict(color='black'))
 for box, color in zip(plt.boxplot([passthrough_execution_times, teleop_execution_times], labels=['Passthrough', 'Teleop'], patch_artist=True)['boxes'], box_colors):
     box.set_facecolor(color)
 
 plt.ylabel('Execution Time (seconds)')
-plt.title('Box Plot of Execution Time')
+plt.title('Pick and Place Execution Time')
 plt.grid(True, linestyle='--', alpha=0.7)
 
 # Print mean and standard deviation
