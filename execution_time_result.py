@@ -28,7 +28,7 @@ teleop_std_dev = np.std(teleop_execution_times)
 box_colors = ['lightblue', 'lightgreen']
 
 # Plot box plot with custom colors and grid
-plt.boxplot([passthrough_execution_times, teleop_execution_times], labels=['Passthrough', 'Teleoperation mode'], patch_artist=True,
+plt.boxplot([passthrough_execution_times, teleop_execution_times], labels=['Passthrough', 'Teleoperation'], patch_artist=True,
             boxprops=dict(facecolor=box_colors[0]), medianprops=dict(color='black'))
 for box, color in zip(plt.boxplot([passthrough_execution_times, teleop_execution_times], labels=['Passthrough', 'Teleop'], patch_artist=True)['boxes'], box_colors):
     box.set_facecolor(color)
