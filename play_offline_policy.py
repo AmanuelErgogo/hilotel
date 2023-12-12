@@ -74,7 +74,7 @@ def main():
             execution_time[f"demo_{demo_count}_min"] = (time.monotonic() - t_start) / 60
             is_new_demo = True
             
-            log_dir_exec_time = os.path.join("./logs/robomimic", args_cli.task, 'agent_execution_time.json')
+            log_dir_exec_time = os.path.join("./logs/robomimic", args_cli.task, 'pure_agent_execution_time.json')
             with open(log_dir_exec_time, 'w') as json_file:
                 json.dump(execution_time, json_file)
 
