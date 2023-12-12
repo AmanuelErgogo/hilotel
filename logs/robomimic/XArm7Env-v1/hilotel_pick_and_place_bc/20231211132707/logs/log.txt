@@ -1,0 +1,22 @@
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['obs']
+using obs modality: rgb with keys: []
+using obs modality: depth with keys: []
+using obs modality: scan with keys: []
+
+============= Loaded Environment Metadata =============
+Array shape: (1108,)
+run failed with error:
+tuple index out of range
+
+Traceback (most recent call last):
+  File "train.py", line 360, in main
+    train(config, device=device)
+  File "train.py", line 95, in train
+    shape_meta = FileUtils.get_shape_metadata_from_dataset(
+  File "/home/aman/.local/lib/python3.8/site-packages/robomimic/utils/file_utils.py", line 137, in get_shape_metadata_from_dataset
+    shape_meta['ac_dim'] = f["data/{}/actions".format(demo_id)].shape[1]
+IndexError: tuple index out of range
+

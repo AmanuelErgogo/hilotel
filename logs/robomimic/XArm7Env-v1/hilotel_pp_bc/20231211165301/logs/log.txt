@@ -1,0 +1,29 @@
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['states']
+using obs modality: rgb with keys: []
+using obs modality: depth with keys: []
+using obs modality: scan with keys: []
+
+============= Loaded Environment Metadata =============
+demo: <HDF5 group "/data/demo_0" (5 members)> demo_id: demo_0 Array shape: 1
+run failed with error:
+'Unable to synchronously open object (component not found)'
+
+Traceback (most recent call last):
+  File "train.py", line 360, in main
+    train(config, device=device)
+  File "train.py", line 95, in train
+    shape_meta = FileUtils.get_shape_metadata_from_dataset(
+  File "/home/aman/.local/lib/python3.8/site-packages/robomimic/utils/file_utils.py", line 147, in get_shape_metadata_from_dataset
+    initial_shape = demo["obs/{}".format(k)].shape[1:]
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "/home/aman/.local/lib/python3.8/site-packages/h5py/_hl/group.py", line 357, in __getitem__
+    oid = h5o.open(self.id, self._e(name), lapl=self._lapl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5o.pyx", line 189, in h5py.h5o.open
+KeyError: 'Unable to synchronously open object (component not found)'
+
